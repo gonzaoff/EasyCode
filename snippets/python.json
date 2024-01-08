@@ -1,0 +1,218 @@
+{
+    "Crear lista enteros": {
+        "prefix": "crear_lista_enteros",
+        "body": [
+            "def crear_lista_enteros(nombre=input(),cantidad=input()):",
+            "    nombre = [int() for i in range(cantidad)]",
+            "    print(f'{nombre}, se ah creado con exito')"
+        ],
+        "description": "Crea una lista de enteros"
+    },
+    "Crear lista floats": {
+        "prefix": "crear_lista_floats",
+        "body": [
+            "def crear_lista_floats(nombre=input(),cantidad=input()):",
+            "    nombre = [float() for i in range(cantidad)]",
+            "    print(f'{nombre}, se ah creado con exito')"
+        ],
+        "description": "Crea una lista de floats"
+    },
+    "Crear lista str": {
+        "prefix": "crear_lista_str",
+        "body": [
+            "def crear_lista_str(nombre=input(),cantidad=input()):",
+            "    nombre = [str() for i in range(cantidad)]",
+            "    print(f'{nombre}, se ah creado con exito')"
+        ],
+        "description": "Crea una lista de strings"
+    },
+    "Añadir a lista": {
+        "prefix": "añadir_a_lista",
+        "body": [
+            "def añadir_a_lista(array, elemento):",
+            "    if not isinstance(array, list):",
+            "        raise TypeError('La lista debe ser de tipo list/tupple.')",
+            "    array = array[:] + elemento",
+            "    return array"
+        ],
+        "description": "Añade un elemento a una lista"
+    },
+    "Eliminar de lista": {
+        "prefix": "eliminar_de_lista",
+        "body": [
+            "def eliminar_de_lista(array, elemento):",
+            "    return [item for item in array if item != elemento]"
+        ],
+        "description": "Elimina un elemento de una lista"
+    },
+    "Encontrar índice": {
+        "prefix": "encontrar_indice",
+        "body": [
+            "def encontrar_indice(lista,valor):",
+            "    for valores in range(len(lista)):",
+            "        if lista[valores] == valor:",
+            "            return valores"
+        ],
+        "description": "Encuentra el índice de un valor en una lista"
+    },
+    "Obtener tamaño de lista": {
+        "prefix": "obtener_tamaño_lista",
+        "body": [
+            "def obtener_tamaño_lista(lista):",
+            "    return len(lista)"
+        ],
+        "description": "Obtiene el tamaño de una lista"
+    },
+    "Crear diccionario": {
+        "prefix": "crear_diccionario",
+        "body": [
+            "def crear_diccionario():",
+            "    return {}"
+        ],
+        "description": "Crea un diccionario vacío"
+    },
+    "Añadir clave-valor a diccionario": {
+        "prefix": "añadir_clave_valor_a_diccionario",
+        "body": [
+            "def añadir_clave_valor_a_diccionario(diccionario, clave, valor):",
+            "    diccionario[clave] = valor"
+        ],
+        "description": "Añade una clave-valor a un diccionario"
+    },
+    "Obtener valor de clave de diccionario": {
+        "prefix": "obtener_valor_de_clave_de_diccionario",
+        "body": [
+            "def obtener_valor_de_clave_de_diccionario(diccionario, clave):",
+            "    return diccionario[clave]"
+        ],
+        "description": "Obtiene el valor de una clave de un diccionario"
+    },
+    "Eliminar clave de diccionario": {
+        "prefix": "eliminar_clave_de_diccionario",
+        "body": [
+            "def eliminar_clave_de_diccionario(diccionario, clave):",
+            "    del diccionario[clave]"
+        ],
+        "description": "Elimina una clave de un diccionario"
+    },
+	"Sumar": {
+        "prefix": "sumar",
+        "body": [
+            "def sumar(numeros):",
+            "    suma = 0",
+            "    for numero in numeros:",
+            "        suma += numero",
+            "    return suma"
+        ],
+        "description": "Suma los números en una lista"
+    },
+    "Promediar": {
+        "prefix": "promediar",
+        "body": [
+            "def promediar(numeros):",
+            "    suma = 0",
+            "    cantElement = 0",
+            "    for numero in numeros:",
+            "        suma += numero",
+            "        cantElement += 1",
+            "    return suma/cantElement"
+        ],
+        "description": "Calcula el promedio de los números en una lista"
+    },
+    "Obtener cantidad objetos array": {
+        "prefix": "obtener_cantidad_objetos_array",
+        "body": [
+            "def obtener_cantidad_objetos_array(array):",
+            "    cantidad_objetos = 0",
+            "    for elemento in array:",
+            "        cantidad_objetos += 1",
+            "    return cantidad_objetos"
+        ],
+        "description": "Obtiene la cantidad de objetos en un array"
+    },
+    "Leer archivo": {
+        "prefix": "leer_archivo",
+        "body": [
+            "def leer_archivo(archivo):",
+            "    with open(archivo) as f:",
+            "        data = f.readlines()",
+            "    return data"
+        ],
+        "description": "Lee un archivo de texto"
+    },
+    "Escribir archivo": {
+        "prefix": "escribir_archivo",
+        "body": [
+            "def escribir_archivo(archivo, data):",
+            "    with open(archivo, 'w') as f:",
+            "        for linea in data:",
+            "            f.write(linea)"
+        ],
+        "description": "Escribe en un archivo de texto"
+    },
+    "Generar número aleatorio": {
+        "prefix": "generar_numero_aleatorio",
+        "body": [
+            "def generar_numero_aleatorio():",
+            "    return random.random()"
+        ],
+        "description": "Genera un número aleatorio entre 0 y 1"
+    },
+    "Generar número aleatorio entre": {
+        "prefix": "generar_numero_aleatorio_entre",
+        "body": [
+            "def generar_numero_aleatorio_entre(min, max):",
+            "    return random.randint(min, max)"
+        ],
+        "description": "Genera un número aleatorio entre un rango dado"
+    },
+    "Es igual": {
+        "prefix": "es_igual",
+        "body": [
+            "def es_igual(variable, valor):",
+            "    return variable == valor"
+        ],
+        "description": "Comprueba si una variable es igual a un valor"
+    },
+    "Es mayor igual": {
+        "prefix": "es_mayor_igual",
+        "body": [
+            "def es_mayor_igual(variable, valor):",
+            "    return variable >= valor"
+        ],
+        "description": "Comprueba si una variable es mayor o igual que un valor"
+    },
+    "Es menor igual": {
+        "prefix": "es_menor_igual",
+        "body": [
+            "def es_menor_igual(variable, valor):",
+            "    return variable <= valor"
+        ],
+        "description": "Comprueba si una variable es menor o igual que un valor"
+    },
+    "Es menor": {
+        "prefix": "es_menor",
+        "body": [
+            "def es_menor(variable, valor):",
+            "    return variable < valor"
+        ],
+        "description": "Comprueba si una variable es menor que un valor"
+    },
+    "Es mayor": {
+        "prefix": "es_mayor",
+        "body": [
+            "def es_mayor(variable, valor):",
+            "    return variable > valor"
+        ],
+        "description": "Comprueba si una variable es mayor que un valor"
+    },
+    "Iterar lista": {
+        "prefix": "iterar_lista",
+        "body": [
+            "def iterar_lista(lista):",
+            "    for elemento in lista:",
+            "        pass"
+        ],
+        "description": "Itera sobre una lista"
+    }
+}
